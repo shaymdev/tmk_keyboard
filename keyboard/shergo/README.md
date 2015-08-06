@@ -9,9 +9,6 @@ Move to this directory then just run `make` like:
 
     $ make
 
-Use `make -f Makefile.pjrc` if you want to use PJRC stack but I find no reason to do so now.
-
-
 ## Keymap
 
 I'll try to keep an updated keymap on keyboard-layout-editor.com but recent changes make me not sure how to do best permalink it here. Sorry.
