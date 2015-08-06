@@ -6,44 +6,51 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KEYMAP(	ESC,	QUOT,	COMM,	DOT,	P,		Y,		F,		G,		C,		R,		L,		SLSH, \
 				GRV,	A,		O,		E,		U,		I,		D,		H,		T,		N,		S,		MINS, \
 				EQL,	SCLN,	Q,		J,		K,		X,		B,		M,		W,		V,		Z,		BSLS, \
-				LGUI,	FN1,	FN0,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN1,	RGUI \
+				LGUI,	FN3,	FN2,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN3,	RGUI \
 		),*/
 	    KEYMAP(	TAB,	FN25,	X,		I,		Y,		F,		D,		B, \
 				ESC,	QUOT,	COMM,	DOT,	P,		G,		C,		R,		L,		SLSH, \
 				GRV,	A,		O,		E,		U,		H,		T,		N,		S,		MINS, \
 				EQL,	SCLN,	Q,		J,		K,		M,		W,		V,		Z,		BSLS, \
-				LGUI,	FN1,	FN0,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN1,	RGUI \
+				LGUI,	FN3,	FN2,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN3,	RGUI \
 		)
 
-	    /***** Layer 1 - numbers and symbols ******/
+	    /***** Layer 1 - qwerty ******///TODO: see if when dvorak is default the backslash/minus thing is correct. Not sure how to handle TRNS
+	    KEYMAP(	TAB,	FN25,	B,		G,		T,		Y,		H,		N, \
+				ESC,	Q,		W,		E,		R,		U,		I,		O,		P,		SLSH, \
+				GRV,	A,		S,		D,		F,		J,		K,		L,		SCLN,	QUOT, \
+				EQL,	Z,		X,		C,		V,		M,		COMM,	DOT,	BSLS,	MINS, \
+				LGUI,	FN3,	FN2,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN3,	RGUI \
+		)
+
+
+	    /***** Layer 2 - numbers and symbols ******/
 	    KEYMAP(	TRNS,	TRNS,	TRNS,	FN18,	FN17,	TRNS,	TRNS,	TRNS, \
 				TRNS,	FN11,	FN12,	FN21,	FN22,	P7,		P8,		P9,		PMNS,	TRNS, \
 				TRNS,	FN13,	FN14,	FN19,	FN10,	P4,		P5,		P6,		PPLS,	TRNS, \
 				TRNS,	FN15,	FN16,	LBRC,	RBRC,	P1,		P2,		P3,		PENT,	TRNS, \
-				TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	P0,		TRNS,	PDOT \
+				TRNS,	FN4,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	P0,		TRNS,	PDOT \
 		)
 
-	    /***** Layer 2 - nav and f-keys ******/
+	    /***** Layer 3 - nav and f-keys ******/
 	    KEYMAP(	TRNS,	TRNS,	TRNS,	PGDN,	PGUP,	TRNS,	TRNS,	TRNS, \
 				TRNS,	TRNS,	HOME,	UP,		END,	F7,		F8,		F9,		F10,	TRNS, \
-				TRNS,	TRNS,	LEFT,	DOWN,	RGHT,	F4,		F5,		F6,		F11,	TRNS, \
-				TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	F1,		F2,		F3,		F12,	TRNS, \
-				TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS \
-		)
-
-	    /***** Layer 3 - qwerty ******/
-	    KEYMAP(	TAB,	FN25,	B,		G,		T,		Y,		H,		N, \
-				ESC,	Q,		W,		E,		R,		U,		I,		O,		P,		SLSH, \
-				GRV,	A,		S,		D,		F,		J,		K,		L,		SCLN,	MINS, \
-				EQL,	Z,		X,		C,		V,		M,		COMM,	DOT,	BSLS,	RSHIFT, \
-				LGUI,	FN1,	FN0,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN1,	RGUI \
+				CAPS,	TRNS,	LEFT,	DOWN,	RGHT,	F4,		F5,		F6,		F11,	TRNS, \
+				FN8,	TRNS,	TRNS,	TRNS,	TRNS,	F1,		F2,		F3,		F12,	FN9, \
+				TRNS,	TRNS,	FN5,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS \
 		)
 
 };
 
 const uint16_t PROGMEM fn_actions[] = {
-	[0] = ACTION_LAYER_MOMENTARY(1), //activate layer 1
-	[1] = ACTION_LAYER_MOMENTARY(2), //activate layer 2
+	[2] = ACTION_LAYER_MOMENTARY(2),
+	[3] = ACTION_LAYER_MOMENTARY(3),
+	[4] = ACTION_LAYER_TOGGLE(2),
+	[5] = ACTION_LAYER_TOGGLE(3),
+
+	[8] = ACTION_DEFAULT_LAYER_SET(0), //default as dvorak
+	[9] = ACTION_DEFAULT_LAYER_SET(1), //default as qwerty
+
 
 	[10] = ACTION_MODS_KEY(MOD_LSFT, KC_0), //)
 	[11] = ACTION_MODS_KEY(MOD_LSFT, KC_1), //!
