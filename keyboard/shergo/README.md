@@ -1,4 +1,4 @@
-GH60 keyboard firmware
+shergo keyboard firmware
 ======================
 DIY minimal ergonomic split keyboard designed by shaymdev with many influences from geekhack and deskthority communities
   <a href="https://geekhack.org/index.php?topic=71614.0">build log</a>
