@@ -12,7 +12,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				ESC,	QUOT,	COMM,	DOT,	P,		G,		C,		R,		L,		SLSH, \
 				GRV,	A,		O,		E,		U,		H,		T,		N,		S,		MINS, \
 				EQL,	SCLN,	Q,		J,		K,		M,		W,		V,		Z,		BSLS, \
-				LGUI,	FN3,	FN2,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN3,	RGUI \
+				LGUI,	FN3,	FN2,	LSFT,	LCTL,	BSPC,	SPC,	DEL,	FN3,	RGUI \
 		)
 
 	    /***** Layer 1 - qwerty ******///TODO: see if when dvorak is default the backslash/minus thing is correct. Not sure how to handle TRNS
@@ -20,7 +20,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				ESC,	Q,		W,		E,		R,		U,		I,		O,		P,		SLSH, \
 				GRV,	A,		S,		D,		F,		J,		K,		L,		SCLN,	QUOT, \
 				EQL,	Z,		X,		C,		V,		M,		COMM,	DOT,	BSLS,	MINS, \
-				LGUI,	FN3,	FN2,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN3,	RGUI \
+				LGUI,	FN3,	FN2,	LSFT,	LCTL,	BSPC,	SPC,	DEL,	FN3,	RGUI \
 		)
 
 
