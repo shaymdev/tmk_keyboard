@@ -8,20 +8,20 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				EQL,	SCLN,	Q,		J,		K,		X,		B,		M,		W,		V,		Z,		BSLS, \
 				LGUI,	FN3,	FN2,	LSFT,	LCTL,	SPC,	BSPC,	DEL,	FN3,	RGUI \
 		),*/
-	    KEYMAP(	TAB,	FN25,	X,		I,		Y,		F,		D,		B, \
+	    KEYMAP(	FN25,	GRV,	X,		I,		Y,		F,		D,		B, \
 				ESC,	QUOT,	COMM,	DOT,	P,		G,		C,		R,		L,		SLSH, \
-				GRV,	A,		O,		E,		U,		H,		T,		N,		S,		MINS, \
+				TAB,	A,		O,		E,		U,		H,		T,		N,		S,		MINS, \
 				EQL,	SCLN,	Q,		J,		K,		M,		W,		V,		Z,		BSLS, \
-				LGUI,	FN3,	FN2,	LSFT,	LCTL,	BSPC,	SPC,	DEL,	FN3,	RGUI \
-		)
+				LGUI,	FN3,	FN2,	LSFT,	LCTL,	BSPC,	SPC,	FN3,	DEL,	RGUI \
+		),
 
 	    /***** Layer 1 - qwerty ******///TODO: see if when dvorak is default the backslash/minus thing is correct. Not sure how to handle TRNS
-	    KEYMAP(	TAB,	FN25,	B,		G,		T,		Y,		H,		N, \
+	    KEYMAP(	FN25,	GRV,	B,		G,		T,		Y,		H,		N, \
 				ESC,	Q,		W,		E,		R,		U,		I,		O,		P,		SLSH, \
-				GRV,	A,		S,		D,		F,		J,		K,		L,		SCLN,	QUOT, \
+				TAB,	A,		S,		D,		F,		J,		K,		L,		SCLN,	QUOT, \
 				EQL,	Z,		X,		C,		V,		M,		COMM,	DOT,	BSLS,	MINS, \
-				LGUI,	FN3,	FN2,	LSFT,	LCTL,	BSPC,	SPC,	DEL,	FN3,	RGUI \
-		)
+				LGUI,	FN3,	FN2,	LSFT,	LCTL,	BSPC,	SPC,	FN23,	DEL,	RGUI \
+		),
 
 
 	    /***** Layer 2 - numbers and symbols ******/
@@ -30,7 +30,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				TRNS,	FN13,	FN14,	FN19,	FN10,	P4,		P5,		P6,		PPLS,	TRNS, \
 				TRNS,	FN15,	FN16,	LBRC,	RBRC,	P1,		P2,		P3,		PENT,	TRNS, \
 				TRNS,	FN4,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	P0,		TRNS,	PDOT \
-		)
+		),
 
 	    /***** Layer 3 - nav and f-keys ******/
 	    KEYMAP(	TRNS,	TRNS,	TRNS,	PGDN,	PGUP,	TRNS,	TRNS,	TRNS, \
@@ -66,6 +66,6 @@ const uint16_t PROGMEM fn_actions[] = {
 	[21] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC), //{
 	[22] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC), //}
 
-	[25] = ACTION_MODS_TAP_KEY(MOD_ALT, KC_ENT), //}
+	[25] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_ENT), 
 
 };
