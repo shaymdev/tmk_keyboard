@@ -33,10 +33,10 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		),
 
 	    /***** Layer 3 - nav and f-keys ******/
-	    KEYMAP(	TRNS,	TRNS,	TRNS,	PGDN,	PGUP,	TRNS,	TRNS,	TRNS, \
+	    KEYMAP(	TRNS,	TRNS,	TRNS,	PGDN,	PGUP,	VOLU,	VOLD,	MUTE, \
 				TRNS,	TRNS,	HOME,	UP,		END,	F7,		F8,		F9,		F10,	TRNS, \
 				CAPS,	TRNS,	LEFT,	DOWN,	RGHT,	F4,		F5,		F6,		F11,	TRNS, \
-				FN8,	TRNS,	TRNS,	TRNS,	TRNS,	F1,		F2,		F3,		F12,	FN9, \
+				FN8,	NLCK,	TRNS,	TRNS,	TRNS,	F1,		F2,		F3,		F12,	FN9, \
 				TRNS,	TRNS,	FN5,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS \
 		)
 
