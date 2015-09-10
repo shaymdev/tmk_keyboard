@@ -27,7 +27,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	    /***** Layer 2 - numbers and symbols ******/
 	    KEYMAP(	TRNS,	TRNS,	TRNS,	FN18,	FN17,	TRNS,	TRNS,	TRNS, \
 				TRNS,	FN11,	FN12,	FN21,	FN22,	P7,		P8,		P9,		PMNS,	TRNS, \
-				TRNS,	FN13,	FN14,	FN19,	FN10,	P4,		P5,		P6,		PPLS,	TRNS, \
+				FN26,	FN13,	FN14,	FN19,	FN10,	P4,		P5,		P6,		PPLS,	TRNS, \
 				TRNS,	FN15,	FN16,	LBRC,	RBRC,	P1,		P2,		P3,		PENT,	TRNS, \
 				TRNS,	FN4,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	P0,		TRNS,	PDOT \
 		),
@@ -67,5 +67,6 @@ const uint16_t PROGMEM fn_actions[] = {
 	[22] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC), //}
 
 	[25] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_ENT), 
+	[26] = ACTION_MODS_KEY(MOD_LALT | MOD_SCTL, KC_TAB), 
 
 };
